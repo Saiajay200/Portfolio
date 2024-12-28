@@ -1,0 +1,187 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+body{
+   /* background-color:cyan; */
+}
+.navbar{
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    background-color: rgb(194, 194, 245);
+    padding: 1.2rem 5%; box-shadow: 0 2px 10px black;
+    position: sticky;
+    z-index: 1000;
+}
+.logo a {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: black;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+.logo a:hover{
+    color: white;
+}
+.nav-links{
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    transition: color 0.3s ease;
+}
+.navbar a{
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+    position: relative;
+}
+.navbar a:hover{
+    color: white;
+    
+}
+/* ubderline effect */
+.navbar a::after{
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -4px;
+    left: 0;
+    background-color: black;
+    transition: width 0.3s ease;
+}
+.nav-links a:hover::after{
+    width: 100%;
+}
+header{
+        margin-top: 2rem;
+        text-align: center;
+        padding: 2rem;
+        font-size: 3.5rem;
+    color: #2c3e50;
+    /* margin-bottom: .1rem; */
+}
+section{
+    width: 90%;
+    margin: 5%;
+    margin-top: 0;
+}
+.projects{
+    background-color:whitesmoke;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(44, 43, 43, 0.041);
+    padding: 1rem;
+}
+.cards{
+    padding: 2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+.cards img{
+    width: 100%;
+    border-radius: 20px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    /* padding: 1rem; */
+}
+.card-info{
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    padding: 1rem;
+}
+.parent a{
+    text-decoration: none;
+    background-color: black;
+    padding: 1rem;
+    margin: 1rem;
+    display: block;
+    border-radius: 30px;
+    text-align: center;
+    color: white;
+    width: 60%;
+    margin:0 auto;
+    font-weight: 700;
+    margin-top: 1rem;
+}
+.parent a:hover{
+    transform: translateY(-7px);
+    color: black;
+    background-color: grey;
+}
+.cards>div:hover{
+    transform: translateY(-15px);
+}
+/* Footer */
+footer {
+    text-align: center;
+    padding: 1rem;
+    background: #333;
+    color: white;
+}
+.footerin{
+    display: inline-block;
+}
+footer a{
+    color:white;
+    padding: 0 .7em;
+    margin-top: 1rem;
+}
+footer a:hover{
+    color:cyan;
+}
+@media screen and (max-width:1024px){
+    .cards{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    .footerin{
+        margin-top: 1rem;
+    }
+
+}
+@media screen and (max-width:760px) {
+    .navbar{
+        flex-direction: column;
+        padding: 1rem 3%;
+    }
+    .nav-links {
+        margin-top: 1rem;
+    }
+    .nav-links a {
+        margin: 0 0.5rem;
+        font-size: 1.2rem;
+    }
+    .parent{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    .cards{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+}
+@media screen and (max-width:487px){
+    .navbar {
+        padding: 0.8rem 2%;
+    }
+    .nav-links a {
+        margin: 0 0.5rem;
+        font-size: 0.8rem;
+    }
+    .footer{
+        display: block;
+    }
+    .footerin{
+        margin-top: 1rem;
+    }
+    .parent a{
+        padding: .5rem;
+        margin-top: 1rem;
+    }
+}
